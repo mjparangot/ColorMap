@@ -15,15 +15,15 @@
 	$requestMethod = 'GET';
 	$twitter = new TwitterAPIExchange($settings);
 	$json_trendArray = $twitter->setGetfield($getfield)
-						  ->buildOauth($url, $requestMethod)
-						  ->performRequest();
+					->buildOauth($url, $requestMethod)
+					->performRequest();
 
-	$json_output = json_decode($json_trendArray);
-	var_dump($json_output);
-	//echo $json_output['name'];
-	/*	
-	foreach($json_output[0]['trends'] as $trend) {
-		echo $trend['name'];
+	$json_output = json_decode($json_trendArray, true);
+	
+	foreach ($json_output[0]['trends'] as $trends) {
+		$trend = $trends['name'];
+		$url = $trends['url'];
+		echo "$trend | $url\n";
 	}
-	*/	 		
+	
 ?>
