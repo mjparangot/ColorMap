@@ -20,10 +20,22 @@
 
 	$json_output = json_decode($json_trendArray, true);
 	
+	$trends_array = array();
+	$count = 0;
+	
 	foreach ($json_output[0]['trends'] as $trends) {
+		
 		$trend = $trends['name'];
 		$url = $trends['url'];
-		echo "$trend | $url\n";
+		
+		$trends_array[$count] = array($trend, $url);
+		
+		echo $trends_array[$count][0];
+		echo " | ";
+		echo $trends_array[$count][1];
+		echo "\n";
+		
+		$count = $count + 1;
 	}
 	
 ?>
