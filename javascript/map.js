@@ -83,8 +83,8 @@ window.onload = function () {
                     if (state == "MI_1" || state == "MI_2") {
                         current && usa["MI_1"].animate({fill: "#333", stroke: "#666"}, 200);
                         current && usa["MI_2"].animate({fill: "#333", stroke: "#666"}, 200);
-                        usa["MI_1"].animate({fill: st.color, stroke: "#ccc"}, 200);
-                        usa["MI_2"].animate({fill: st.color, stroke: "#ccc"}, 200);
+                        usa["MI_1"].animate({fill: usa["MI_1"].color, stroke: "#ccc"}, 200);
+                        usa["MI_2"].animate({fill: usa["MI_1"].color, stroke: "#ccc"}, 200);
                     }
                     else {
                         current && usa[current].animate({fill: "#333", stroke: "#666"}, 200);

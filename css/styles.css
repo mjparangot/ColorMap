@@ -1,0 +1,17 @@
+
+body {
+    background: #333;
+    color: #fff;
+    font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+
+#map {
+    width: 959px;
+    height: 593px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+}
