@@ -12,7 +12,7 @@ window.onload = function () {
     rsr.canvas.setAttribute('preserveAspectRatio', 'true');
     
     var fillColor = "#F4F4F4";
-    var strokeColor = "222"
+    var strokeColor = "#222"
     
     var attr = {
         fill: fillColor,
