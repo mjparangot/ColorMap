@@ -1,17 +1,47 @@
 
 body {
-    background: #333;
+    background: #fff;
     color: #fff;
     font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
 }
 
 #map {
-    width: 959px;
+    /*width: 959px;
     height: 593px;
     position: absolute;
     top: 10%;
     left: 0;
     bottom: 0;
-    right: 0;
-    margin: 0 auto;
+    right: 0;*/
+    
+    margin-top: 80px;
+    width: 75%;
+    float: left;
+}
+
+svg { height: 100%; width: 100%; }
+
+div.container.twitter {
+    margin: 0;
+}
+
+#trends {
+    margin-top: 70px;
+    display: inline;
+    float: left;
+    border-color: #000;
+    border: double;
+    border-width: medium;
+}
+
+#trends > ul {
+    list-style-type: none;
+}
+
+#trends > ul > li > a {
+    cursor: pointer;
+}
+
+#trends-title {
+    border-bottom: medium;
 }

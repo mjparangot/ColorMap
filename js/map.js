@@ -1,11 +1,23 @@
 
 window.onload = function () {
     
-    var rsr = Raphael('map', '959', '593');
+    var w = 959;
+    var h = 593;
+    
+    
+    
+    var rsr = Raphael('map', w, h);
+    
+    rsr.setViewBox(0, 0, w, h, true);
+    rsr.canvas.setAttribute('preserveAspectRatio', 'true');
+    
+    var fillColor = "#F4F4F4";
+    var strokeColor = "222"
+    
     var attr = {
-        fill: "#333",
-        stroke: "#666",
-        "stroke-width": 1,
+        fill: fillColor,
+        stroke: strokeColor,
+        "stroke-width": 1.25,
         "stroke-linejoin": "round"
     };
 
@@ -81,14 +93,14 @@ window.onload = function () {
                 st[0].style.cursor = "pointer";
                 st[0].onmouseover = function () {
                     if (state == "MI_1" || state == "MI_2") {
-                        current && usa["MI_1"].animate({fill: "#333", stroke: "#666"}, 200);
-                        current && usa["MI_2"].animate({fill: "#333", stroke: "#666"}, 200);
-                        usa["MI_1"].animate({fill: usa["MI_1"].color, stroke: "#ccc"}, 200);
-                        usa["MI_2"].animate({fill: usa["MI_1"].color, stroke: "#ccc"}, 200);
+                        current && usa["MI_1"].animate({fill: fillColor, stroke: strokeColor}, 200);
+                        current && usa["MI_2"].animate({fill: fillColor, stroke: strokeColor}, 200);
+                        usa["MI_1"].animate({fill: usa["MI_1"].color, stroke: strokeColor}, 200);
+                        usa["MI_2"].animate({fill: usa["MI_1"].color, stroke: strokeColor}, 200);
                     }
                     else {
-                        current && usa[current].animate({fill: "#333", stroke: "#666"}, 200);
-                        st.animate({fill: st.color, stroke: "#ccc"}, 200);
+                        current && usa[current].animate({fill: fillColor, stroke: strokeColor}, 200);
+                        st.animate({fill: st.color, stroke: strokeColor}, 200);
                     }
                     st.toFront();
                     rsr.safari();
@@ -96,11 +108,11 @@ window.onload = function () {
                 };
                 st[0].onmouseout = function () {
                     if (state == "MI_1" || state == "MI_2") {
-                        usa["MI_1"].animate({fill: "#333", stroke: "#666"}, 200);
-                        usa["MI_2"].animate({fill: "#333", stroke: "#666"}, 200);
+                        usa["MI_1"].animate({fill: fillColor, stroke: strokeColor}, 200);
+                        usa["MI_2"].animate({fill: fillColor, stroke: strokeColor}, 200);
                     }
                     else {
-                        st.animate({fill: "#333", stroke: "#666"}, 200);
+                        st.animate({fill: fillColor, stroke: strokeColor}, 200);
                     }
                     st.toFront();
                     rsr.safari();
