@@ -1,2 +1,4 @@
-# ColorMap
-Highlighting the states with different colors.
+TweetMap
+========
+
+Mapping the top trending topics on Twitter throughout different locations.
